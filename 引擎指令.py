@@ -34,28 +34,28 @@ def play_():
 
     for a in interaction:
         if a in command:
-            results["動作"].append(a)
+            results["動作"] = a
 
     for a in sorted(object_,key=len,reverse=turn):
         if a in command:
-            results["物件"].append(a)
+            results["物件"] = a
             break
 
     for a in move:
         if a in command:
-            results["移動"].append(a)
+            results["移動"] = a
 
     for a in turn:
         if a in command:
-            results["轉向"].append(a)
+            results["轉向"] = a
 
     for a in function:
         if a in command:
-            results["功能指令"].append(a)
+            results["功能指令"] = a
 
     for a in special:
         if a in command:
-            results["特殊指令"].append(a)
+            results["特殊指令"] = a
     return results
 
 #=============================================================================

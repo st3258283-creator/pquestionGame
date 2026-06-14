@@ -48,7 +48,7 @@ def move_(action_): # 移動函數(移動方式,移動步數)
     stepcount = action_[1]  # 移動步數
     # 判定移動位置
     while stepcount > 0 :
-        if movement == ["往前"]:
+        if movement == "往前":
             if around["前"][1] == "空":
                 if player["方向"] == 2 :
                     player["Y"] -= 1
@@ -64,7 +64,7 @@ def move_(action_): # 移動函數(移動方式,移動步數)
                     stepcount -= 1
             else:
                 stepcount = 0  # 如果前方不是空的 就停止移動
-        elif movement == ["往後"]:
+        elif movement == "往後":
             if around["後"][1] == "空":
                 if player["方向"] == 2 :
                     player["Y"] += 1
@@ -80,7 +80,7 @@ def move_(action_): # 移動函數(移動方式,移動步數)
                     stepcount -= 1
             else:
                 stepcount = 0  # 如果後方不是空的 就停止移動
-        elif movement == ["往左"]:
+        elif movement == "往左":
             if around["左"][1] == "空":
                 if player["方向"] == 2 :
                     player["X"] += 1
@@ -96,7 +96,7 @@ def move_(action_): # 移動函數(移動方式,移動步數)
                     stepcount -= 1
             else:
                 stepcount = 0  # 如果左方不是空的 就停止移動
-        elif movement == ["往右"]:
+        elif movement == "往右":
             if around["右"][1] == "空":
                 if player["方向"] == 2 :
                     player["X"] -= 1
@@ -122,11 +122,11 @@ def move_(action_): # 移動函數(移動方式,移動步數)
 # 改面向 轉向函數
 def turn_(a):
     # 轉向偵測
-    if a == ["右轉"]:
+    if a == "右轉":
         player["方向"] = player["方向"] % 4 + 1
-    elif a == ["左轉"]:
+    elif a == "左轉":
         player["方向"] = (player["方向"]-2) % 4 + 1
-    elif a == ["向後轉"]:
+    elif a == "向後轉":
         player["方向"] = (player["方向"]+1) % 4 + 1
     forward()
 #=====================================================================================================================
