@@ -35,8 +35,15 @@ def play_():
     for a in interaction:
         if a in command:
             results["動作"] = a
+        elif a == "查看背包":
+            results["功能指令"] = a
 
     for a in sorted(object_,key=len,reverse=turn):
+        if a in command:
+            results["物件"] = a
+            break
+
+    for a in sorted(items,key=len,reverse=turn):
         if a in command:
             results["物件"] = a
             break
